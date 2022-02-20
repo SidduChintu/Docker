@@ -18,7 +18,7 @@ phases:
   build:
     commands:
       - cd $CODEBUILD_SRC_DIR
-      - /opt/sonar-scanner/bin/sonar-scanner -X -Dsonar.sources=. -Dproject.settings=sonar-project.properties -Dsonar.projectKey=Sid-Project-SonarQube -Dsonar.host.url=$Sonar_URL -Dsonar.login=$Sonar_Access_Token > sonarqube_scanreport.json
+      - /opt/sonar-scanner/bin/sonar-scanner -X -Dsonar.sources=. -Dproject.settings=sonar-project.properties -Dsonar.projectKey=Sid-Project -Dsonar.host.url=http://52.66.213.169:9000 -Dsonar.login=eb18ef624795829ca63583dc7ad74dabd22bc8fd > sonarqube_scanreport.json
       - echo "build stage completed"
   
 #   post_build:
